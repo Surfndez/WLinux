@@ -148,6 +148,17 @@ int wmain(int argc, wchar_t const *argv[])
         }
     }
 
+	// Parse URI
+
+	if (args->Kind == Windows::ApplicationModel::Activation::ActivationKind::Protocol)
+	{
+		Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^ eventArgs =
+			dynamic_cast<Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^>(args);
+
+		// TODO: Handle URI activation  
+		// The received URI is eventArgs->Uri->RawUri
+	}
+
     // If an error was encountered, print an error message.
     if (FAILED(hr)) {
         if (hr == HRESULT_FROM_WIN32(ERROR_LINUX_SUBSYSTEM_NOT_PRESENT)) {

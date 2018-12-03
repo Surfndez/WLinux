@@ -33,6 +33,12 @@
             <desktop:ExecutionAlias Alias="mydistro.exe" />
           </uap3:AppExecutionAlias>
         </uap3:Extension>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="wlinux">
+            <uap:Logo>Assets\large logo.png</uap:Logo>
+            <uap:DisplayName>WLinux</uap:DisplayName>
+          </uap:Protocol>
+        </uap:Extension>
       </Extensions>
     </Application>
   </Applications>
